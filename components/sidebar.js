@@ -13,9 +13,9 @@ import {
 
 const Sidebar = () => {
   return (
-    <div className="hidden sm:flex flex-colum">
+    <div className="hidden sm:flex flex-col p-2 xl:items-start fixed h-full">
       {/* twiterLogo */}
-      <div className="hoverEffect">
+      <div className="hoverEffect p-0 hover:bg-blue-100 xl:px-1">
         <Image
           width="50"
           height="50"
@@ -23,7 +23,7 @@ const Sidebar = () => {
         ></Image>
       </div>
       {/* Menu */}
-      <div className="">
+      <div className="mt-4 mb-2.5 xl:items-start">
         <MenuItems text="Home" Icon={HomeIcon} active />
         <MenuItems text="Explore" Icon={HashtagIcon} />
         <MenuItems text="Notifications" Icon={BellIcon} />
@@ -44,13 +44,14 @@ const Sidebar = () => {
         <img
           src="https://dl.memuplay.com/new_market/img/com.vicman.newprofilepic.icon.2022-06-07-21-33-07.png"
           alt="userImage"
-          width="50"
+          //   width="50"
+          className=" h-12 w-12 rounded full xl:mr-2"
         />
-        <div className="">
-          <h4>Bazubagira</h4>
-          <p>@bedinah</p>
+        <div className="leading-5 hiden xl:inline">
+          <h4 className="font-bold">Bazubagira</h4>
+          <p className=" text-gray-500">@bedinah</p>
         </div>
-        <DotsHorizontalIcon className="h-5" />
+        <DotsHorizontalIcon className="h-5 xl:ml-8 hiden xl:inline" />
       </div>
     </div>
   );
